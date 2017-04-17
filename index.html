@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Match Version 0.1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <img class="navbar-brand" id="logo" src="images/overwatch-logo.png">
+            <a class="navbar-brand" href="index.html">Memory Match Game Version 0.1</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Settings</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2">
+            <h1>Stats: </h1>
+            <div class="games-played">
+                <h2 class="label">Games Played: </h2>
+                <p class="value"></p>
+            </div>
+            <div class="attempts">
+                <h2 class="label">Attempts: </h2>
+                <p class="value"></p>
+            </div>
+            <div class="accuracy">
+                <h2 class="label">Accuracy: </h2>
+                <p class="value"></p>
+            </div>
+            <p>Game Info Area</p>
+            <button class="btn btn-inverse reset">Reset Game</button>
+        </div>
+        <div class="col-xs-10">
+            <div id="game-area" class="row">
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/reinhardt.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/reinhardt.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/mercy.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/mercy.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/tracer.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/tracer.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/widowmaker.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/widowmaker.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/reaper.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/reaper.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/dva.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/dva.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/soldier76.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/soldier76.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/junkrat.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/junkrat.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/mei.png">
+                    </div>
+                </div>
+                <div class="card col-xs-2">
+                    <div class="back">
+                        <img src="images/cardback.png">
+                    </div>
+                    <div class="front">
+                        <img src="images/mei.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
