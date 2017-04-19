@@ -1,13 +1,9 @@
 body {
     background-color: orange;
 }
-.navbar-brand #logo {
-    height: 7vh;
-    width: auto;
-}
-img {
+#game-area img {
     height: 23vh;
-    width: auto;
+    width: 8vw;
 }
 ul {
     padding: 0;
@@ -17,4 +13,7 @@ li {
 }
 .back {
     position: absolute;
+}
+.clicked {
+    display: none;
 }
