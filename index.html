@@ -12,7 +12,7 @@
     <div class="container">
         <div class="navbar-header">
             <img class="navbar-brand" id="logo" src="images/overwatch-logo.png">
-            <a class="navbar-brand" href="index.html">Memory Match Game Version 0.5</a>
+            <a class="navbar-brand" href="index.html">Memory Match Game Version 1.0</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Settings</a></li>
@@ -22,7 +22,7 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-xs-2">
+        <div id="statsBar" class="col-xs-2">
             <h1>Stats: </h1>
             <div class="games-played">
                 <h2 class="label">Games Played: </h2>
@@ -40,151 +40,161 @@
         </div>
         <div class="col-xs-10">
             <div id="game-area" class="row">
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="reinhardt" src="images/reinhardt.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="reinhardt" src="images/reinhardt.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="mercy" src="images/mercy.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="mercy" src="images/mercy.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="tracer" src="images/tracer.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="tracer" src="images/tracer.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="widowmaker" src="images/widowmaker.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="widowmaker" src="images/widowmaker.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="reaper" src="images/reaper.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="reaper" src="images/reaper.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="dva" src="images/dva.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="dva" src="images/dva.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="soldier76" src="images/soldier76.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="soldier76" src="images/soldier76.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="junkrat" src="images/junkrat.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="junkrat" src="images/junkrat.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="mei" src="images/mei.png">
-                    </div>
-                </div>
-                <div class="card col-xs-2">
-                    <div class="back">
-                        <img src="images/cardback.png">
-                    </div>
-                    <div class="front">
-                        <img class="mei" src="images/mei.png">
-                    </div>
-                </div>
-            </div>
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="reinhardt" src="images/reinhardt.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="reinhardt" src="images/reinhardt.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="mercy" src="images/mercy.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="mercy" src="images/mercy.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="tracer" src="images/tracer.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="tracer" src="images/tracer.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="widowmaker" src="images/widowmaker.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="widowmaker" src="images/widowmaker.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="reaper" src="images/reaper.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="reaper" src="images/reaper.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="dva" src="images/dva.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="dva" src="images/dva.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="soldier76" src="images/soldier76.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="soldier76" src="images/soldier76.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="junkrat" src="images/junkrat.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="junkrat" src="images/junkrat.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="mei" src="images/mei.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card col-xs-2">-->
+                    <!--<div class="back">-->
+                        <!--<img src="images/cardback.png">-->
+                    <!--</div>-->
+                    <!--<div class="front">-->
+                        <!--<img class="mei" src="images/mei.png">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-12">-->
+                    <!--<h1 id="winningMsg" class="text-center"></h1>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-2">
+            <h1 id="winningMsg" class="text-center"></h1>
         </div>
     </div>
 </div>
