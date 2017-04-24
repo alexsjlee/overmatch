@@ -3,7 +3,7 @@
 //====================
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 2;
+var total_possible_matches = 9;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
@@ -102,7 +102,7 @@ function resetCards() {
 
 //You Win Function
 function youWin() {
-    $("#winningMsg").text("You Win!");
+    $("#winningMsg").text("Is this easy mode??");
 }
 
 //Display Stats Function
@@ -159,11 +159,11 @@ function makeNewCard(charClass) {
 //Randomizer
 function randomizer(listOfAllHeroesAsAnArray) {
     var array = listOfAllHeroesAsAnArray.slice();
+    // var array = array.concat(array,array);
     var newHeroPoolClass = [];
     for(var i = 0; i < 9; i++) {
         var randomNum = Math.floor(Math.random()*array.length);
-        newHeroPoolClass.push(array[randomNum]);
-        newHeroPoolClass.push(array[randomNum]);
+        newHeroPoolClass.push(array[randomNum],array[randomNum]);
         array.splice(randomNum, 1);
     }
     for(var j = 0; j < 18; j++){
