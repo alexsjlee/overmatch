@@ -36,3 +36,7 @@ img#me {
     background-color: #2e66b7;
     /*width: 20vw;*/
 }
+audio {
+    margin-top: 7%;
+    width: 100%;
+}
