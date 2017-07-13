@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Memory Match Version 0.5</title>
+    <title>Memory Match Version 1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <img class="navbar-brand" id="logo" src="images/overwatch-logo.png">
-            <a class="navbar-brand" href="index.html">Memory Match Game Version 1.0</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Settings</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
+<div class="container main">
     <div class="row">
-        <div id="statsBar" class="col-xs-2">
-            <h1>Stats: </h1>
+        <div id="statsBar" class="col-xs-3 text-center">
+            <!-- <img class="col-xs-8 col-xs-offset-2 logo text-center" src="./images/overwatch-logo.png"> -->
+            <img class="center-block img-responsive logo" src="./images/overwatch-logo.png">
+            <!-- <h3>Stats: </h3> -->
+            <br>
             <div class="games-played">
                 <h2 class="label">Games Played: </h2>
                 <p class="value"></p>
@@ -36,164 +30,16 @@
                 <h2 class="label">Accuracy: </h2>
                 <p class="value"></p>
             </div>
-            <button class="btn btn-inverse reset">Reset Game</button>
-            <audio controls autoplay=true loop="loop">
-                <source src="Rally%20the%20Heroes.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <button class="btn btn-danger reset">Reset Game</button>
+            <div class="col-xs-12 audio">
+                <i class="fa fa-volume-off fa-3x clicked" aria-hidden="true" onclick="audio_on()"></i>
+                <i class="fa fa-volume-up fa-3x" aria-hidden="true" onclick="audio_off()"></i>
+                <audio class="themesong" autoplay=true loop="loop" src="./sounds/Rally the Heroes.mp3"></audio>
+            </div>
         </div>
-        <div class="col-xs-10">
-            <div id="game-area" class="row">
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="reinhardt" src="images/reinhardt.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="reinhardt" src="images/reinhardt.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="mercy" src="images/mercy.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="mercy" src="images/mercy.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="tracer" src="images/tracer.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="tracer" src="images/tracer.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="widowmaker" src="images/widowmaker.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="widowmaker" src="images/widowmaker.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="reaper" src="images/reaper.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="reaper" src="images/reaper.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="dva" src="images/dva.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="dva" src="images/dva.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="soldier76" src="images/soldier76.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="soldier76" src="images/soldier76.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="junkrat" src="images/junkrat.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="junkrat" src="images/junkrat.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="mei" src="images/mei.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="card col-xs-2">-->
-                    <!--<div class="back">-->
-                        <!--<img src="images/cardback.png">-->
-                    <!--</div>-->
-                    <!--<div class="front">-->
-                        <!--<img class="mei" src="images/mei.png">-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-                <!--<div class="col-xs-12">-->
-                    <!--<h1 id="winningMsg" class="text-center"></h1>-->
-                <!--</div>-->
-            <!--</div>-->
+        <div class="col-xs-9">
+            <div id="game-area" class="row game-board">
+                <!-- Cards will get atttached here -->
             </div>
         </div>
     </div>
@@ -202,6 +48,41 @@
             <h1 id="winningMsg" class="text-center"></h1>
         </div>
     </div>
+</div>
+
+<div id="easyMode" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1 class="modal-title text-center">You Win!</h4>
+      </div>
+      <div class="modal-body">
+        <img class="img-responsive center-block" src="./images/easymode.gif">
+        <audio class="easymode" src="./sounds/D.Va_-_Easy_mode.ogg"></audio>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary center-block reset" data-dismiss="modal">Play Again!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="clapping" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1 class="modal-title text-center">You Win... kinda?</h4>
+      </div>
+      <div class="modal-body">
+        <img class="img-responsive center-block" src="./images/clapping.gif">
+        <audio class="clapping" src="./sounds/Reaper_-_Stupid_monkey.ogg"></audio>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary center-block reset" data-dismiss="modal">Play Again!</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

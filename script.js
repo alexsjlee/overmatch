@@ -16,6 +16,7 @@ var classNameArray = ["bastion", "dva", "genji", "hanzo", "junkrat", "lucio", "m
 $(document).ready(function(){
     randomizer(classNameArray);
     setTimeout(delayedStarters, 500);
+    $('.themesong').prop("volume", .5);
 });
 
 //====================
@@ -40,30 +41,6 @@ function delayedStarters() {
         $(".back").click(card_clicked);
     });
 }
-
-//Card Clicked Function
-// function card_clicked() {
-//
-//     if($(this).find(".back").attr("class") === "back clicked") {
-//         return;
-//     } else {
-//         $(this).find(".back").addClass("clicked");
-//         if(first_card_clicked === null) {
-//             first_card_clicked = $(this);
-//         } else {
-//             $(".card").off();
-//             second_card_clicked = $(this);
-//             if($(first_card_clicked).find(".front").find("img").attr("class") === $(second_card_clicked).find(".front").find("img").attr("class")) {
-//                 setTimeout(matched, 750);
-//             } else {
-//                 attempts++;
-//                 setTimeout(resetCards, 1000);
-//             }
-//             accuracy = (matches/attempts);
-//             display_stats();
-//         }
-//     }
-// }
 
 function card_clicked() {
     var thisParent = $(this).parent();
@@ -90,6 +67,18 @@ function card_clicked() {
     }
 }
 
+//Music
+function audio_off(){
+    $('.fa-volume-off').removeClass('clicked');
+    $('.fa-volume-up').addClass('clicked');
+    $('.themesong').trigger('pause');
+}
+function audio_on(){
+    $('.fa-volume-up').removeClass('clicked');
+    $('.fa-volume-off').addClass('clicked');
+    $('.themesong').trigger('play');
+}
+
 //Reset Cards Function
 function resetCards() {
     $(first_card_clicked).find(".back").removeClass("clicked");
@@ -102,7 +91,14 @@ function resetCards() {
 
 //You Win Function
 function youWin() {
-    $("#winningMsg").text("Is this easy mode??");
+    // $("#winningMsg").text("Is this easy mode??");
+    if(accuracy > .5) {
+        $('#easyMode').modal("show");
+        $('.easymode').trigger('play');
+    } else if(accuracy <= .5) {
+        $('#clapping').modal("show");
+        $('.clapping').trigger('play');
+    }
 }
 
 //Display Stats Function

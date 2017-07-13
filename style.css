@@ -1,15 +1,17 @@
 body {
     /*background-color: #ebb546;*/
-    background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-417025.jpg");
+    background-image: url("./images/wallpaper.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10vh;
 }
 #game-area img {
     width: 8vw;
 }
 #statsBar {
-    background-color: #2e66b7;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background-color: rgba(4, 102, 175, .5);
+    padding: 5vh 0;
+    
     border: 1px solid black;
 }
 #statsBar h1 {
@@ -27,16 +29,38 @@ li {
 .clicked {
     display: none;
 }
-img#me {
-    height: 20vh;
-}
-.about, .skills{
-    margin-top: 5vh;
-    border: 1px solid black;
-    background-color: #2e66b7;
-    /*width: 20vw;*/
-}
 audio {
-    margin-top: 7%;
-    width: 100%;
+    display: none;
+}
+.gameboard{
+    margin: 0 5vh;
+}
+.audio {
+    margin: 2vh 0;
+}
+.label, .value {
+    font-size: 3vh;
+    text-shadow: 1px 1px 1px black;
+}
+.label {
+    color: rgba(250, 156, 30, 1);
+}
+.value {
+    color: white;
+}
+.logo {
+    height: 17vh;
+    width: auto;
+}
+
+@media (orientation:portrait) {
+    .main {
+        display: none;
+    }
+    body {
+        background-color: black;
+        /* background-image: url("http://support.volvocars.com/SiteCollectionDocuments/theGuide/S90/images/_system/rotate.gif"); */
+        background-image: url("https://www.camb-ed.co.uk/Portals/_default/Skins/CambEducation2015/images/phone-tablet_orientation-switch.png");
+        background-size: cover;
+    }
 }
