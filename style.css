@@ -63,5 +63,6 @@ audio {
         /* background-image: url("http://support.volvocars.com/SiteCollectionDocuments/theGuide/S90/images/_system/rotate.gif"); */
         background-image: url("https://www.camb-ed.co.uk/Portals/_default/Skins/CambEducation2015/images/phone-tablet_orientation-switch.png");
         background-size: cover;
+        background-position: top right;
     }
 }

@@ -16,7 +16,8 @@ var classNameArray = ["bastion", "dva", "genji", "hanzo", "junkrat", "lucio", "m
 $(document).ready(function(){
     randomizer(classNameArray);
     setTimeout(delayedStarters, 500);
-    $('.themesong').prop("volume", .5);
+    $('.themesong').prop("volume", .37);
+    $('.clapping').trigger('play');
 });
 
 //====================
