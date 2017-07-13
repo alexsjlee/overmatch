@@ -17,7 +17,6 @@ $(document).ready(function(){
     randomizer(classNameArray);
     setTimeout(delayedStarters, 500);
     $('.themesong').prop("volume", .37);
-    $('.clapping').trigger('play');
 });
 
 //====================
