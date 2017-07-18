@@ -1,10 +1,10 @@
 body {
-    /*background-color: #ebb546;*/
     background-image: url("./images/wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    margin: 10vh;
+    margin-top: 10vh;
+     height: 90vh; 
 }
 #game-area img {
     width: 8vw;
@@ -54,13 +54,17 @@ audio {
     width: auto;
 }
 
+.modal-content {
+    background-color: rgba(4, 102, 175, .3);
+    color: rgba(250, 156, 30, 1);
+}
+
 @media (orientation:portrait) {
     .main {
         display: none;
     }
     body {
         background-color: black;
-        /* background-image: url("http://support.volvocars.com/SiteCollectionDocuments/theGuide/S90/images/_system/rotate.gif"); */
         background-image: url("https://www.camb-ed.co.uk/Portals/_default/Skins/CambEducation2015/images/phone-tablet_orientation-switch.png");
         background-size: cover;
         background-position: top right;

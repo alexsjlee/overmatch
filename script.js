@@ -92,10 +92,10 @@ function resetCards() {
 //You Win Function
 function youWin() {
     // $("#winningMsg").text("Is this easy mode??");
-    if(accuracy > .5) {
+    if(accuracy > .2) {
         $('#easyMode').modal("show");
         $('.easymode').trigger('play');
-    } else if(accuracy <= .5) {
+    } else if(accuracy <= .2) {
         $('#clapping').modal("show");
         $('.clapping').trigger('play');
     }
