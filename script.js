@@ -25,7 +25,6 @@ $(document).ready(function(){
 
 //Initialize After Randomizer
 function delayedStarters() {
-    //changed*****
     $(".back").click(card_clicked);
     games_played++;
     display_stats();
@@ -37,22 +36,20 @@ function delayedStarters() {
         $("#winningMsg").text("");
         $("#game-area").html("");
         randomizer(classNameArray);
-        //changed******
         $(".back").click(card_clicked);
     });
 }
 
 function card_clicked() {
+    $('.click_sound').trigger('play');
     var thisParent = $(this).parent();
     if($(thisParent).find(".back").attr("class") === "back clicked") {
         return;
     } else {
         $(thisParent).find(".back").addClass("clicked");
         if(first_card_clicked === null) {
-            //Changed*****
             first_card_clicked = $(thisParent);
         } else {
-            //changed******
             $(".back").off();
             second_card_clicked = $(thisParent);
             if($(first_card_clicked).find(".front").find("img").attr("class") === $(second_card_clicked).find(".front").find("img").attr("class")) {
@@ -81,17 +78,16 @@ function audio_on(){
 
 //Reset Cards Function
 function resetCards() {
+    $('.no_match').trigger('play');
     $(first_card_clicked).find(".back").removeClass("clicked");
     $(second_card_clicked).find(".back").removeClass("clicked");
     first_card_clicked = null;
     second_card_clicked = null;
-    //changed******
     $(".back").click(card_clicked);
 }
 
 //You Win Function
 function youWin() {
-    // $("#winningMsg").text("Is this easy mode??");
     if(accuracy > .2) {
         $('#easyMode').modal("show");
         $('.easymode').trigger('play');
@@ -124,7 +120,7 @@ function reset_stats() {
 
 //Matched
 function matched() {
-    //Changed
+    $('.match').trigger('play');
     $(".back").off();
     matches++;
     attempts++;
@@ -133,7 +129,6 @@ function matched() {
     if(matches === total_possible_matches) {
         setTimeout(youWin, 500);
     } else {
-        //changed
         $(".back").click(card_clicked);
     }
 }
@@ -155,7 +150,6 @@ function makeNewCard(charClass) {
 //Randomizer
 function randomizer(listOfAllHeroesAsAnArray) {
     var array = listOfAllHeroesAsAnArray.slice();
-    // var array = array.concat(array,array);
     var newHeroPoolClass = [];
     for(var i = 0; i < 9; i++) {
         var randomNum = Math.floor(Math.random()*array.length);
