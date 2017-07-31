@@ -1,0 +1,72 @@
+body {
+    background-image: url("./images/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 10vh;
+     height: 90vh; 
+}
+#game-area img {
+    width: 8vw;
+}
+#statsBar {
+    background-color: rgba(4, 102, 175, .5);
+    padding: 5vh 0;
+    
+    border: 1px solid black;
+}
+#statsBar h1 {
+    margin-top: 0;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+.back {
+    position: absolute;
+}
+.clicked {
+    display: none;
+}
+audio {
+    display: none;
+}
+.gameboard{
+    margin: 0 5vh;
+}
+.audio {
+    margin: 2vh 0;
+}
+.label, .value {
+    font-size: 3vh;
+    text-shadow: 1px 1px 1px black;
+}
+.label {
+    color: rgba(250, 156, 30, 1);
+}
+.value {
+    color: white;
+}
+.logo {
+    height: 17vh;
+    width: auto;
+}
+
+.modal-content {
+    background-color: rgba(4, 102, 175, .3);
+    color: rgba(250, 156, 30, 1);
+}
+
+@media (orientation:portrait) {
+    .main {
+        display: none;
+    }
+    body {
+        background-color: black;
+        background-image: url("https://www.camb-ed.co.uk/Portals/_default/Skins/CambEducation2015/images/phone-tablet_orientation-switch.png");
+        background-size: cover;
+        background-position: top right;
+    }
+}
